@@ -3,7 +3,7 @@ import streamlit_authenticator as stauth
 import streamlit_survey as ss
 
 import os
-from supabase_py import create_client, Client
+from supabase import create_client, Client
 
 import datetime
 
@@ -103,8 +103,8 @@ def on_submit():
 
 
 # --- database setup ---
-supabase_url = "https://wjoyfgmnnpfrafjhfjtv.supabase.co"
-supabase_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indqb3lmZ21ubnBmcmFmamhmanR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTgwNDExMzcsImV4cCI6MjAxMzYxNzEzN30.cmufDZyYBEN2eXzUZSdrz1LJIuJbZeoIrTkYgPwKa-w"
+supabase_url = st.secrets["SUPABASE_URL"]
+supabase_key = st.secrets["SUPABASE_KEY"]
 supabase: Client = create_client(supabase_url, supabase_key)
 
 def insert_data(supabase: Client, data: dict):
