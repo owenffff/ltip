@@ -104,3 +104,5 @@ validators==0.22.0
 wcwidth==0.2.8
 websockets==10.4
 zipp==3.17.0
+postgrest==0.11.0
+
