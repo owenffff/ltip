@@ -162,7 +162,6 @@ if st.session_state["authentication_status"]:
                 label= "q1",
                 options=["A. Retention-Focused", "B. Performance-Focused"],
                 index = 0,
-                key = None,
                 horizontal=True,
                 label_visibility = "collapsed"
                 )
@@ -174,7 +173,6 @@ if st.session_state["authentication_status"]:
                 label= "q2",
                 options=["A. Retention-Focused", "B. Performance-Focused"],
                 index = 0,
-                key = None,
                 horizontal=True,
                 label_visibility = "collapsed"
                 )
@@ -187,7 +185,6 @@ if st.session_state["authentication_status"]:
                 label= "q3",
                 options=["A. Yes", "B. No"],
                 index = 0,
-                key = None,
                 horizontal=True,
                 label_visibility = "collapsed"
                 )
@@ -206,7 +203,6 @@ if st.session_state["authentication_status"]:
                 label= "q4",
                 options=["A. Yes", "B. No"],
                 index = 0,
-                key = None,
                 horizontal=True,
                 label_visibility = "collapsed"
                 )
