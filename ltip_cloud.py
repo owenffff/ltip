@@ -146,14 +146,13 @@ if st.session_state["authentication_status"] is None:
 # --- Main Page ---
 if st.session_state["authentication_status"]:
     authenticator.logout('Logout', 'main', key='unique_key')
-    st.write(f'Welcome *{st.session_state["name"]}*')
-    st.header('Long-Term Incentive Design Tool')
-    st.caption('Please complete the following questions')
+    st.write(f'Welcome *{st.session_state["name"]}*', key = 'wrie_init')
+    st.header('Long-Term Incentive Design Tool', key = 'header_init')
+    st.caption('Please complete the following questions', key = 'caption_init')
     st.divider()
 
-
     # Define question flows:
-    survey = ss.StreamlitSurvey("Survey 1")
+    survey = ss.StreamlitSurvey("Survey")
     pages = survey.pages(3, on_submit=on_submit)
 
     with pages:
